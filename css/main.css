@@ -197,6 +197,7 @@ h4, .h4 {
 }
 .fixed-side-navbar:hover {
   background: transparent;
+  transition: all 0.3s;
 }
 .fixed-side-navbar:hover .nav > li > a > span {
   color: rgba(0, 0, 0, 0.7);
@@ -264,7 +265,7 @@ h4, .h4 {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border-color: black;
-  boder-right: 0;
+  border-right: 0;
 }
 .fixed-side-navbar .nav > li a:hover > span {
   color: black;
@@ -624,7 +625,7 @@ FACILITIES CONTENT
   color: #fff;
   font-size: 40px;
   position: absolute;
-  font-weight: 900;
+  font-weight: 200;
   font-family: monospace;
   font-variant: small-caps;
   top: 50%;
@@ -635,6 +636,13 @@ FACILITIES CONTENT
   text-align: center;
   text-decoration: none;
 }
+.facilities-content .text a:hover{
+  color: #fbff94;
+  font-size: 55px;
+  font-weight: 700;
+  transition: 0.4s
+}
+
 /*FACILITIES CONTENT----------------END---------------------------------------------------------------------------------------------*/
 
 
@@ -699,7 +707,7 @@ FACILITIES CONTENT
   color: #fff;
   font-size: 40px;
   position: absolute;
-  font-weight: 900;
+  font-weight: 200;
   font-family: monospace;
   font-variant: small-caps;
   top: 50%;
@@ -709,6 +717,12 @@ FACILITIES CONTENT
   transform: translate(-50%, -50%);
   text-align: center;
   text-decoration: none;
+}
+.materials-content .text a:hover{
+  color: #fbff94;
+  font-size: 55px;
+  transition: 0.4s;
+  font-weight: 900;
 }
 
 /*MATERIALS CONTENT----------------END---------------------------------------------------------------------------------------------*/
@@ -866,10 +880,11 @@ footer .primary-button a:hover{
   text-transform: uppercase;
   font-size: 11px;
   color: #fff;
-  font-weight: 900;
+  font-weight: 700;
   text-decoration: none;
   letter-spacing: 0.5px;
   background-color: #ff8e43;
+  transition: 0.2s;
 }
 footer ul {
   padding: 0px;
