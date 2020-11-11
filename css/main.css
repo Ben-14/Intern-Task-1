@@ -14,6 +14,11 @@ body {
   position: relative; /* we need this for the scrollspy */
   font-size: 14px;
 }
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
 a { color: #3CC; }
 a:hover { color: #FF0; }
 h4, .h4 {
@@ -38,6 +43,7 @@ h4, .h4 {
   width: 100%;
   min-height: 100vh;
   background-size: cover;
+  z-index: 1;
 }
 
 
@@ -83,10 +89,9 @@ h4, .h4 {
 .navlink .site-logo {
   transition: 0.2s;
   color:  #c2c2c2;
-  padding-left: 10px;
-  padding-top: 0px;
-  height: 4%;
-  width: 4%;
+  padding: 0px 0px 0px 10px;
+  height: 3%;
+  width: 3%;
 }*/
 .navlink a:hover{
   /*background-color: #ddd;*/
@@ -208,6 +213,7 @@ h4, .h4 {
   font-size: 12px;
   padding: 2px 12px;
   border-radius: 15px;
+
 }
 .fixed-side-navbar .nav > li a.active {
   background-color: transparent;
@@ -284,16 +290,25 @@ h4, .h4 {
 .baner-content {
   padding-top: 30vh;
   text-align: center;
-  background-color:#03476e ;
+  background-color:#0054a3 ;
   background-image: url(../img/1st-section.jpg);*/
 }
+/*.baner-content  #particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: #03476e;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}*/
 .baner-content h1 {
   margin-top: 0px;
   font-size: 128px;
   color: #fff;
   font-weight: 100;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 0px;
 }
 .baner-content h2 {
   margin-top: 10px;
@@ -407,33 +422,6 @@ h4, .h4 {
   color: #fff;
 }
 
-/* Not NEEDED
-.service-content .left-text p {
-  color: #fff;
-}
-.service-content .left-text ul {
-  padding: 0;
-  margin-top: 30px;
-  list-style: none;
-}
-.service-content .left-text ul li {
-  margin: 15px 0px;
-  font-weight: 600;
-  color: #fff;
-}
-.service-content .left-text .primary-button {
-  margin: 30px 0px;
-}
-.service-content .left-text .service-item .line-dec {
-  width: 45px;
-  height: 3px;
-  background-color: #8b25ba;
-  margin: 20px auto 15px auto;
-}
-.service-content .left-text .service-item p {
-  color: #fff;
-}
- Not NEEDED */
 
 /*SERVICE CONTENT ----------------END-----------------------------------------------------------------------------------------------*/
 
@@ -445,7 +433,7 @@ h4, .h4 {
 .projects-content {
   padding-top: 9vh;
   /*background-image: url(../img/3rd-section.jpg);*/
-  background-color: #03476e;
+  background-color: #0054a3;
   background-attachment: fixed;
   min-height: 145vh;
   background-size: cover;
@@ -559,7 +547,7 @@ h4, .h4 {
   margin-top: 0px;
   font-size: 19px;
   font-weight: 600;
-}*/
+}8*/
 
 /*PROJECTS CONTEBT----------------END---------------------------------------------------------------------------------------------*/
 
@@ -578,6 +566,11 @@ FACILITIES CONTENT
   background-position: center center;
 
 }
+.facilities-content .container{
+  position: relative;
+  z-index: 1;
+}
+
 .facilities-content h2{
   font-size: 48px;
   color: #fff;
@@ -589,9 +582,9 @@ FACILITIES CONTENT
   width: 250px;
   height: 3px;
   background-color: #8b25ba;
-  margin: 10px 0px 40px 550px;
+  margin: 10px 0px 40px 430px;
 }
-.facilities-content .container {
+.facilities-content .col-sm-4 .container {
   position:relative;
   width: 350px;
   height: 300px;
@@ -618,7 +611,7 @@ FACILITIES CONTENT
   background-color: #a2aba6;
   background: rgba(0, 0, 0, 0.3);
 }
-.facilities-content .container:hover .overlay {
+.facilities-content .col-sm-4 .container:hover .overlay {
   opacity: 1;
 }
 .facilities-content .text a{
@@ -650,34 +643,65 @@ FACILITIES CONTENT
 /*--------------------------------------------------------------------------------------------------------------
   MATERIALS CONTENT
 ----------------------------------------------------------------------------------------------------------------------*/
+/*
 .materials-content {
   padding-top: 15vh;
-  /*background-image: url(../img/3rd-section.jpg);*/
-  background-color: #2997ff;
+  background-image: url(../img/3rd-section.jpg);
+  background-color: #03476e;
   background-attachment: fixed;
   min-height: 100vh;
   background-size: cover;
   background-position: center center;
-
+}*/
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: #0054a3;
+  background-position: center center;
+  z-index: -1;
+}
+.materials-content .container{
+  position: absolute;
+  z-index: 1;
+  left:   175px;
+  overflow: hidden;
+  margin-top:100px;
 }
 .materials-content h2{
   font-size: 48px;
   color: #fff;
   font-weight: 700;
-  padding: 10px 10px 0px 10px;
+  margin: 30px 0px 0px 0px;
   text-align: center;
 }
 .materials-content .line-dec {
   width: 250px;
   height: 3px;
   background-color: #8b25ba;
-  margin: 10px 0px 40px 550px;
+  margin: 15px 0px -50px 430px;
 }
-.materials-content .container {
-  position:relative;
+.materials-content .row{
+  margin: 100px 0px 10px 0px;
+  left: 150px;
+
+  overflow-x: hidden;
+}
+.materials-content .col-sm-4 {
+  position: relative;
+  left: 0;
+  height: 400px;
+  padding : 0px 0px 0px 0px;
+  overflow-x: hidden;
+}
+
+.materials-content .col-sm-4 .container {
+  position: relative;
+  left: 0;
   width: 350px;
   height: 300px;
+  margin: 0px 0px 0px 0px;
   padding : 0px 0px 0px 0px;
+  overflow-x: hidden;
 }
 .materials-content .image {
   display: inline-block;
@@ -700,7 +724,7 @@ FACILITIES CONTENT
   background-color: #a2aba6;
   background: rgba(0, 0, 0, 0.3);
 }
-.materials-content .container:hover .overlay {
+.materials-content .col-sm-4 .container:hover .overlay {
   opacity: 1;
 }
 .materials-content .text a{
@@ -724,6 +748,14 @@ FACILITIES CONTENT
   transition: 0.4s;
   font-weight: 900;
 }
+/*canvas.particle-js-canvas-el{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}*/
 
 /*MATERIALS CONTENT----------------END---------------------------------------------------------------------------------------------*/
 
